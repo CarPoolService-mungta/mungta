@@ -22,13 +22,11 @@ const support = {
             icon: icons.ChromeOutlined
         },
         {
-            id: 'documentation',
-            title: 'Documentation',
+            id: 'question',
+            title: '문의',
             type: 'item',
-            url: 'https://codedthemes.gitbook.io/mantis-react/',
-            icon: icons.QuestionOutlined,
-            external: true,
-            target: true
+            url: '/question',
+            icon: icons.QuestionOutlined
         }
     ]
 };
