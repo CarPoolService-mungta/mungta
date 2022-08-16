@@ -22,10 +22,10 @@ const support = {
             icon: icons.ChromeOutlined
         },
         {
-            id: 'question',
+            id: 'questions',
             title: '문의',
             type: 'item',
-            url: '/question',
+            url: '/questions',
             icon: icons.QuestionOutlined
         }
     ]

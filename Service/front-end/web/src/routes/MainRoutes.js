@@ -18,7 +18,8 @@ const AntIcons = Loadable(lazy(() => import('pages/components-overview/AntIcons'
 
 const PartyMatching = Loadable(lazy(() => import('pages/party-matching/PartyMatching')));
 
-const Question = Loadable(lazy(() => import('pages/user-profile/question/question')));
+const Questions = Loadable(lazy(() => import('pages/user-profile/question/Questions')));
+const Question = Loadable(lazy(() => import('pages/user-profile/question/Question')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -64,7 +65,11 @@ const MainRoutes = {
             element: <PartyMatching />
         },
         {
-            path: 'question',
+            path: 'questions',
+            element: <Questions/>
+        },
+        {
+            path: 'question/:id',
             element: <Question/>
         }
     ]
