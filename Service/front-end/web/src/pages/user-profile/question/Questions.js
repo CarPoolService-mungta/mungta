@@ -3,6 +3,7 @@ import DataTable from "../../../components/@extended/DataTable";
 import {useCallback, useEffect, useState} from "react";
 import {getQuestionsByUserId} from 'api/question'
 import {useNavigate} from 'react-router-dom';
+import {Button, Grid} from "@mui/material";
 
 
 const Questions = ()=>{
@@ -31,8 +32,21 @@ const Questions = ()=>{
 
     },[])
 
+    const postQuestion=()=>{
+        navigate(`/question/post`);
+    }
+
     return (
     <MainCard title="1:1 문의하기">
+        <Grid
+            container
+            direction="row"
+            justifyContent="flex-end"
+            spacing={2}>
+            <Grid item>
+                <Button variant="contained" onClick={postQuestion}>문의하기</Button>
+            </Grid>
+        </Grid>
         <DataTable columns={columns} rows={data} rowsPerPageOptions={[10,20,30]} isLoading={isLoading} rowClick={rowClick}/>
     </MainCard>
     )

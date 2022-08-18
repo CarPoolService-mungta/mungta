@@ -20,6 +20,7 @@ const PartyMatching = Loadable(lazy(() => import('pages/party-matching/PartyMatc
 
 const Questions = Loadable(lazy(() => import('pages/user-profile/question/Questions')));
 const Question = Loadable(lazy(() => import('pages/user-profile/question/Question')));
+const PostQuestion = Loadable(lazy(() => import('pages/user-profile/question/PostQuestion')));
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -71,7 +72,11 @@ const MainRoutes = {
         {
             path: 'question/:id',
             element: <Question/>
-        }
+        },
+        {
+            path: 'question/post',
+            element: <PostQuestion/>
+        },
     ]
 };
 
