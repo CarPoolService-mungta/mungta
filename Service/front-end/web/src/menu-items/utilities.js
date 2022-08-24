@@ -8,7 +8,8 @@ import {
     LoadingOutlined,
     ScheduleOutlined
 } from '@ant-design/icons';
-
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import HistoryIcon from '@mui/icons-material/History';
 // icons
 const icons = {
     FontSizeOutlined,
@@ -57,31 +58,30 @@ const utilities = {
             breadcrumbs: false
         },
         {
-            id: 'now-carpool ',
-            title: '진행중인 카풀',
-            type: 'item',
-            url: '/icons/ant',
-            icon: icons.ScheduleOutlined,
-            breadcrumbs: false
+            id:'start-carpool',
+            title : '카풀 하기',
+            type : 'item',
+            url : '/party-management',
+            icon: DirectionsCarIcon,
         },
         {
-            id: 'carpool-history',
+            id: 'my-carpool',
             title: '내 카풀 내역',
             type: 'collapse',
-            icon: icons.LoadingOutlined,
+            icon: HistoryIcon,
             children: [
                 {
                     id: 'now-carpool ',
                     title: '진행중인 카풀',
                     type: 'item',
-                    url: '/icons/ant',
+                    url: '/my-carpool-list',
                     breadcrumbs: false
                 },
                 {
                     id: 'last-carpool ',
                     title: '지난 카풀',
                     type: 'item',
-                    url: '/party-matching',
+                    url: '/my-carpool-past-list',
                     breadcrumbs: false
                 }
             ]

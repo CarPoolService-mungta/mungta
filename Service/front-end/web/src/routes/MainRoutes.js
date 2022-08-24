@@ -3,6 +3,12 @@ import { lazy } from 'react';
 // project import
 import Loadable from 'components/Loadable';
 import MainLayout from 'layout/MainLayout';
+import SelectRole from 'pages/party-management/Pages/SelectRole';
+import CreateParty from 'pages/party-management/Pages/CreateParty';
+import SelectCarpoolList from 'pages/party-management/Pages/SelectCarpoolList';
+import MyCarpoolList from 'pages/party-management/Pages/MyCarpoolList';
+import MyCarpoolPastList from 'pages/party-management/Pages/MyCarpoolPastList';
+import MyCarpoolDetail from 'pages/party-management/Pages/MyCarpoolDetail';
 
 // render - dashboard
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
@@ -77,6 +83,34 @@ const MainRoutes = {
             path: 'question/post',
             element: <PostQuestion/>
         },
+        {
+            path: 'party-management',
+            element: <SelectRole />,
+        },
+        {
+            path: 'create-party',
+            element: <CreateParty />
+        }
+        ,
+        {
+            path: 'select-carpool-list',
+            element: <SelectCarpoolList />
+        }
+        ,
+        {
+            path: 'my-carpool-list',
+            element: <MyCarpoolList />
+        }
+        ,
+        {
+            path: 'my-carpool-past-list',
+            element: <MyCarpoolPastList />
+        }
+        ,
+        {
+            path: 'my-carpool-detail',
+            element: <MyCarpoolDetail />
+        }
     ]
 };
 
